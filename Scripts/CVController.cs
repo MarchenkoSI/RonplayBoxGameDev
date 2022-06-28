@@ -10,6 +10,7 @@ namespace RonplayBoxGameDev
 
         [SerializeField] private WordsCVManager     wordsCVManager      = null;
         [SerializeField] private SymbolsCVManager   symbolsCVManager    = null;
+        [SerializeField] private PrimitiveCVManager primitiveCVManager  = null;
 
         public void UpdateWordsCVManager()
         {
@@ -23,6 +24,13 @@ namespace RonplayBoxGameDev
             if (symbolsCVManager == null) return;
 
             symbolsCVManager.SetMarkersPipline();
+        }
+
+        public void UpdatePrimitiveCVManager()
+        {
+            if (primitiveCVManager == null) return;
+
+            primitiveCVManager.SetMarkersPipline();
         }
 
         private void Start()

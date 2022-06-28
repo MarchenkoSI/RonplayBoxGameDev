@@ -125,7 +125,8 @@ namespace RonplayBoxGameDev
                     (
                         threshold_surface_: _threshold_surface,
                         min_enclosing_circle_radius_: 1.0f,
-                        max_enclosing_circle_radius_: 20.0f
+                        max_enclosing_circle_radius_: 20.0f,
+                        block_size_: MarkersIsolatorParams.BlockSize.S15
                     ),
                     ThreadPoolExecutor.instance
                 );
