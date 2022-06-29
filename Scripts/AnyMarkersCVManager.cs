@@ -10,7 +10,7 @@ using UnityRonplayBoxSDK;
 
 namespace RonplayBoxGameDev
 {
-    public class PrimitiveCVManager : MonoBehaviour
+    public class AnyMarkersCVManager : MonoBehaviour
     {
         [SerializeField] private SymbolsTool symbolsTool;
 
@@ -18,13 +18,13 @@ namespace RonplayBoxGameDev
         {
             if (_markers_tracker == null) return;
 
-            DisposeIfCan(_primitive_detector);
+            DisposeIfCan(_any_markers_detector);
 
-            _primitive_detector = null;
+            _any_markers_detector = null;
 
             symbolsTool.FinalizeMarkersTool();
 
-            SetPrimitiveMarkersPipeline();
+            SetAnyMarkersPipeline();
         }
 
         private void Start()
@@ -112,20 +112,20 @@ namespace RonplayBoxGameDev
         // Private
         /////////////////////////////////////////////
 
-        private void SetPrimitiveMarkersPipeline()
+        private void SetAnyMarkersPipeline()
         {
-            _primitive_detector =
-                new PrimitiveMarkersDetector
+            _any_markers_detector =
+                new AnyMarkersDetector
                 (
                     _markers_tracker.GetSamplesSource(),
-                    new PrimitiveMarkersDetectingParams
+                    new AnyMarkersDetectingParams
                     (
                         min_recognition_tracking_weight_: 3
                     ),
                     ThreadPoolExecutor.instance
                 );
 
-            symbolsTool.InitMarkersTool(_primitive_detector.GetSamplesSource());
+            symbolsTool.InitMarkersTool(_any_markers_detector.GetSamplesSource());
         }
 
         private void UnpackFileFromAPK(string file_name_)
@@ -173,12 +173,12 @@ namespace RonplayBoxGameDev
             DisposeIfCan(_cv_simple_filter);
             DisposeIfCan(_markers_isolator);
             DisposeIfCan(_markers_tracker);
-            DisposeIfCan(_primitive_detector);
+            DisposeIfCan(_any_markers_detector);
 
-            _cv_simple_filter   = null;
-            _markers_isolator   = null;
-            _markers_tracker    = null;
-            _primitive_detector = null;
+            _cv_simple_filter = null;
+            _markers_isolator = null;
+            _markers_tracker = null;
+            _any_markers_detector = null;
 
             _threshold_surface.Reset();
         }
@@ -205,7 +205,7 @@ namespace RonplayBoxGameDev
         private MarkersIsolator _markers_isolator = null;
         private MarkersTracker _markers_tracker = null;
 
-        private PrimitiveMarkersDetector _primitive_detector = null;
+        private AnyMarkersDetector _any_markers_detector = null;
     }
 }
 

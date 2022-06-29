@@ -8,9 +8,10 @@ namespace RonplayBoxGameDev
     {
         public static CVController instance = null;
 
-        [SerializeField] private WordsCVManager     wordsCVManager      = null;
-        [SerializeField] private SymbolsCVManager   symbolsCVManager    = null;
-        [SerializeField] private PrimitiveCVManager primitiveCVManager  = null;
+        [SerializeField] private WordsCVManager         wordsCVManager          = null;
+        [SerializeField] private SymbolsCVManager       symbolsCVManager        = null;
+        [SerializeField] private PrimitiveCVManager     primitiveCVManager      = null;
+        [SerializeField] private AnyMarkersCVManager    anyMarkersCVManager     = null;
 
         public void UpdateWordsCVManager()
         {
@@ -31,6 +32,13 @@ namespace RonplayBoxGameDev
             if (primitiveCVManager == null) return;
 
             primitiveCVManager.SetMarkersPipline();
+        }
+
+        public void UpdateAnyMarkersCVManager()
+        {
+            if (anyMarkersCVManager == null) return;
+
+            anyMarkersCVManager.SetMarkersPipline();
         }
 
         private void Start()
