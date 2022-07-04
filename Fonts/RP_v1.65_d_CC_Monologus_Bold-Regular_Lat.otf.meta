@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 17d4668c66074c4448ba950cfc672608
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - RP_d_CC_Monologus_Bold
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 9b43d611db769ea41a1c4a123d2d782c, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
