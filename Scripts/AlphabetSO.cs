@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace RonplayGameDev
+namespace RonplayBoxGameDev
 {
     [CreateAssetMenu(fileName = "Alphabet", menuName = "Alphabet")]
     public class AlphabetSO : ScriptableObject
