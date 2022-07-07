@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-namespace RonplayGameDev
+namespace RonplayBoxGameDev
 {
     public class SelectOnEnabled : MonoBehaviour
     {

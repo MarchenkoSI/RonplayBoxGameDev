@@ -40,7 +40,7 @@ namespace RonplayBoxGameDev
 
             wordsTool.FinalizeWordsTool();
 
-            switch (MarkersConfig.currentMarkersPipeline)
+            switch (GameConfig.currentMarkersPipeline)
             {
                 case MarkersPipeline.Latin:                    
                     SetLatinMarkersPipeline();

@@ -38,7 +38,7 @@ namespace RonplayBoxGameDev
 
             symbolsTool.FinalizeMarkersTool();
 
-            switch (MarkersConfig.currentMarkersPipeline)
+            switch (GameConfig.currentMarkersPipeline)
             {
                 case MarkersPipeline.Latin:
                     SetLatinMarkersPipeline();
