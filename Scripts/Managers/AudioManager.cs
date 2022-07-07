@@ -23,15 +23,21 @@ namespace RonplayBoxGameDev
             {
                 Destroy(gameObject);
             }
+
+            DontDestroyOnLoad(gameObject);
         }
 
         public void PlayClickSound()
         {
+            if (clickSound == null) return;
+
             _audio_source.PlayOneShot(clickSound);
         }
 
         public void PlaySelectSound()
         {
+            if (selectSound == null) return;
+
             _audio_source.PlayOneShot(selectSound);
         }
 
