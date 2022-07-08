@@ -1,0 +1,45 @@
+{
+    "name": "RonplayInputAction",
+    "maps": [
+        {
+            "name": "Default",
+            "id": "491b8a27-3f71-4e28-b45a-93b988a1282e",
+            "actions": [
+                {
+                    "name": "EnterKey",
+                    "type": "Button",
+                    "id": "5fe3bdb8-f0a0-4bb3-8f28-45148029a2ad",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "02ff604d-35d7-43fb-a48f-6045106f551c",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "EnterKey",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "45f89f2b-b2ae-4af6-9bfc-244b49d9deaf",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "EnterKey",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
