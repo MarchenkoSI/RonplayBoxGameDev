@@ -9,7 +9,7 @@ namespace RonplayBoxGameDev
     public class ChangeLayoutButton : MonoBehaviour
     {
         [SerializeField] private GameObject currentlayout;
-        [SerializeField] private GameObject taretLayout;
+        [SerializeField] private GameObject targetLayout;
 
         public UnityEvent OnLayoutChanged;
 
@@ -33,7 +33,7 @@ namespace RonplayBoxGameDev
             OnLayoutChanged.Invoke();
 
             currentlayout.SetActive(false);
-            taretLayout.SetActive(true);
+            targetLayout.SetActive(true);
         }
     }
 }
