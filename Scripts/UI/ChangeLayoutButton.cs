@@ -17,13 +17,7 @@ namespace RonplayBoxGameDev
         {
             Button changeLayoutButton = GetComponent<Button>();
 
-            changeLayoutButton.onClick.AddListener
-                (
-                    () =>
-                    {
-                        ChangeLayout();
-                    }
-                );
+            changeLayoutButton.onClick.AddListener(() => ChangeLayout());
         }
 
         private void ChangeLayout()
@@ -31,6 +25,8 @@ namespace RonplayBoxGameDev
             AudioManager.instance.PlayClickSound();
 
             OnLayoutChanged.Invoke();
+
+            if (currentlayout == null || targetLayout == null) return;
 
             currentlayout.SetActive(false);
             targetLayout.SetActive(true);
