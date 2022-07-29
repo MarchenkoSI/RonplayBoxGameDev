@@ -44,11 +44,9 @@ namespace RonplayBoxGameDev
             {
                 case MarkersPipeline.Latin:                    
                     SetLatinMarkersPipeline();
-
                     break;                    
                 case MarkersPipeline.Cyrillic:                    
                     SetCyrillicMarkersPipeline();
-
                     break;                    
                 case MarkersPipeline.Math:                    
                     SetMathMarkersPipeline();
