@@ -27,8 +27,8 @@ namespace RonplayBoxGameDev
 
             PlayerPrefs.SetString("CurrentMarkersPipeline", GameConfig.currentMarkersPipeline.ToString());
 
-            CVController.instance.UpdateWordsCVManager();
-            CVController.instance.UpdateSymbolsCVManager();
+            //CVController.instance.UpdateWordsCVManager();
+            //CVController.instance.UpdateSymbolsCVManager();
         }
     }
 }

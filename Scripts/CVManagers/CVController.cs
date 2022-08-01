@@ -18,7 +18,7 @@ namespace RonplayBoxGameDev
         {
             if (wordsCVManager == null) return;
 
-            wordsCVManager.SetMarkersPipline();
+            wordsCVManager.UpdateMarkersPipline();
         }
 
         public void UpdateSymbolsCVManager()

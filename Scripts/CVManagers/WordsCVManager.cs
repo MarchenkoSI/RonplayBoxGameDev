@@ -14,7 +14,7 @@ namespace RonplayBoxGameDev
     {
         [SerializeField] private WordsTool wordsTool;
 
-        public void SetMarkersPipline()
+        public void UpdateMarkersPipline()
         {
             if (_markers_tracker == null) return;
 
@@ -28,15 +28,14 @@ namespace RonplayBoxGameDev
             DisposeIfCan(_complex_symbols_detector);
             DisposeIfCan(_words_detector);
 
-            _latin_markers_r_i_recognizer = null;
-            _latin_markers_orientation_determiner = null;
-            _rus_markers_r_i_recognizer = null;
-            _rus_markers_orientation_determiner = null;
-            _math_markers_r_i_recognizer = null;
-            _math_markers_orientation_determiner = null;
-
-            _complex_symbols_detector = null;
-            _words_detector = null;
+            _latin_markers_r_i_recognizer           = null;
+            _latin_markers_orientation_determiner   = null;
+            _rus_markers_r_i_recognizer             = null;
+            _rus_markers_orientation_determiner     = null;
+            _math_markers_r_i_recognizer            = null;
+            _math_markers_orientation_determiner    = null;
+            _complex_symbols_detector               = null;
+            _words_detector                         = null;
 
             wordsTool.FinalizeWordsTool();
 
@@ -144,7 +143,20 @@ namespace RonplayBoxGameDev
                     ThreadPoolExecutor.instance
                 );
 
-            SetMarkersPipline();
+            switch (GameConfig.currentMarkersPipeline)
+            {
+                case MarkersPipeline.Latin:
+                    SetLatinMarkersPipeline();
+                    break;
+                case MarkersPipeline.Cyrillic:
+                    SetCyrillicMarkersPipeline();
+                    break;
+                case MarkersPipeline.Math:
+                    SetMathMarkersPipeline();
+                    break;
+                default:
+                    throw new Exception("Default reached!");
+            }
         }
 
         /////////////////////////////////////////////
