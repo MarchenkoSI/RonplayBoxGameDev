@@ -13,6 +13,7 @@ namespace RonplayBoxGameDev
         [SerializeField] private PrimitiveCVManager     primitiveCVManager      = null;
         [SerializeField] private AnyMarkersCVManager    anyMarkersCVManager     = null;
         [SerializeField] private SurfaceCVManager       surfaceCVManager        = null;
+        [SerializeField] private WallCVManager          wallCVManager           = null;
 
         public void UpdateWordsCVManager()
         {
@@ -43,6 +44,11 @@ namespace RonplayBoxGameDev
         }
 
         public void UpdateSurfaceCVManager()
+        {
+            // Do nothing.
+        }
+
+        public void UpdateWallCVManager()
         {
             // Do nothing.
         }
